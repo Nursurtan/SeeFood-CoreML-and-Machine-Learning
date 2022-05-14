@@ -13,6 +13,7 @@
 		B16D55EC282E9CAB0044B524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16D55EA282E9CAB0044B524 /* Main.storyboard */; };
 		B16D55EE282E9CAC0044B524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16D55ED282E9CAC0044B524 /* Assets.xcassets */; };
 		B16D55F1282E9CAC0044B524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16D55EF282E9CAC0044B524 /* LaunchScreen.storyboard */; };
+		B16D55F9282EA1510044B524 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B16D55F8282EA1510044B524 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B16D55ED282E9CAC0044B524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B16D55F0282E9CAC0044B524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B16D55F2282E9CAC0044B524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16D55F8282EA1510044B524 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B16D55ED282E9CAC0044B524 /* Assets.xcassets */,
 				B16D55EF282E9CAC0044B524 /* LaunchScreen.storyboard */,
 				B16D55F2282E9CAC0044B524 /* Info.plist */,
+				B16D55F8282EA1510044B524 /* Inceptionv3.mlmodel */,
 			);
 			path = SeeFood;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16D55E9282E9CAB0044B524 /* ViewController.swift in Sources */,
+				B16D55F9282EA1510044B524 /* Inceptionv3.mlmodel in Sources */,
 				B16D55E5282E9CAB0044B524 /* AppDelegate.swift in Sources */,
 				B16D55E7282E9CAB0044B524 /* SceneDelegate.swift in Sources */,
 			);
