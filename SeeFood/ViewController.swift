@@ -16,7 +16,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -24,7 +23,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.allowsEditing = false
         
     }
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -42,7 +40,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    
     func detect(image: CIImage) {
         
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
@@ -53,16 +50,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image.")
             }
+
+            if let firstResult = results.first {
+                if firstResult.identifier.contains("hotdog") {
+                    self.navigationItem.title = "Hotdog!"
+                } else {
+                    self.navigationItem.title = "Not Hotdog!"
+                }
+            }
             
-            print(results)
         }
         
         let handler = VNImageRequestHandler(ciImage: image)
         
         do {
             try! handler.perform([request])
-        }
-        catch {
+        } catch {
             print(error)
         }
         
